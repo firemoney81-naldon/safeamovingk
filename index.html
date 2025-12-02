@@ -1,23 +1,487 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "2026년 8월 손없는날 완벽 정리: 이사, 결혼 길일 달력 및 절약 팁",
+      "image": "https://example.com/images/august-lucky-day.png",
+      "datePublished": "2025-12-02T00:00:00+09:00",
+      "dateModified": "2025-12-02T00:00:00+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "길일 정보 전문가이드"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "길일 정보 전문가이드",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://example.com/images/logo.png"
+        }
+      },
+      "description": "2026년 8월 손없는날을 날짜별로 완벽하게 정리했습니다. 이사하기 좋은 날, 결혼 길일, 개업 택일 정보를 상세히 제공하고, 손 없는 날을 활용한 이사 비용 절약 노하우를 공개합니다."
+    }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8; /* 가독성 향상을 위해 높임 */
+            margin: 0;
+            padding: 0;
+            background: #f4f6f9; /* 은은한 배경색 */
+            color: #2c3e50;
+        }
+        header, section, footer {
+            max-width: 960px;
+            margin: 35px auto;
+            padding: 30px 25px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* 부드러운 그림자 */
+            border-top: 5px solid #3498db; /* 강조색 */
+        }
+        h1, h2, h3 {
+            color: #2980b9; /* 청량한 파란색 계열 */
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -0.04em;
+        }
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(41, 128, 185, 0.2);
+        }
+        h2 {
+            font-size: 2.2rem;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.6rem;
+            color: #2c3e50;
+            margin-top: 30px;
+            border-left: 5px solid #85c1e9;
+            padding-left: 10px;
+        }
+        p, ul, ol, li, dl {
+            font-size: 1.15rem; /* 글자 크기 키움 */
+            color: #34495e;
+            margin-bottom: 18px;
+        }
+        ul, ol {
+            padding-left: 30px;
+        }
+        a {
+            color: #1a5276;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(26, 82, 118, 0.3);
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px solid #3498db;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate; /* border-radius 적용을 위해 변경 */
+            border-spacing: 0;
+            margin: 25px 0;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden; /* 자식 요소의 둥근 모서리 적용 */
+        }
+        th, td {
+            border: none;
+            padding: 15px 10px;
+            text-align: center;
+            line-height: 1.5;
+        }
+        th {
+            background-color: #34495e; /* 어두운 네이비 */
+            color: white;
+            font-weight: 700;
+            border-bottom: 3px solid #f4f6f9;
+        }
+        td {
+            background-color: #ecf0f1; /* 밝은 회색 */
+            border-bottom: 1px solid #bdc3c7;
+        }
+        tr:nth-child(even) td {
+            background-color: #e8ebed;
+        }
+        .lucky-day td {
+            background-color: #d6eaf8; /* 길일 강조 배경 */
+            font-weight: 700;
+            color: #2980b9;
+        }
+        .btn-cta {
+            display: block;
+            width: 80%;
+            max-width: 400px;
+            margin: 30px auto 10px auto;
+            padding: 16px 35px;
+            background: #e74c3c; /* 주황색 계열 CTA 버튼 */
+            color: #fff;
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+            transition: background-color 0.3s ease, transform 0.2s;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-size: 1.2rem;
+        }
+        .btn-cta:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 25px 0 35px 0;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        nav ul li a {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #3498db;
+            padding: 10px 18px;
+            border-radius: 30px;
+            border: 2px solid #3498db;
+            background-color: #ecf0f1;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #3498db;
+            color: #ffffff;
+            border-color: #2980b9;
+            outline: none;
+        }
+        form {
+            background-color: #f8f9fb;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px dashed #3498db;
+            margin-top: 20px;
+        }
+        form label {
+            font-weight: 700;
+            display: block;
+            margin: 15px 0 8px 0;
+            font-size: 1.05rem;
+            color: #2c3e50;
+        }
+        form input[type="text"],
+        form input[type="number"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #bdc3c7;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+        form input:focus,
+        form select:focus,
+        form textarea:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+            outline: none;
+        }
+        .anchor {
+            display: block;
+            position: relative;
+            top: -100px;
+            visibility: hidden;
+        }
+        footer p {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            margin: 15px 0;
+        }
+        /* 반응형 */
+        @media(max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.4rem; }
+            p, ul, ol, li, td, th { font-size: 1rem; }
+            nav ul { justify-content: start; }
+            nav ul li a { padding: 8px 15px; font-size: 0.95rem; }
+            header, section, footer {
+                margin: 20px 15px;
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📅 2026년 8월 손없는날: 이사, 결혼 길일 완벽 가이드</h1>
+    <p><strong>'손없는날 8월'</strong>은 전통적으로 악귀(손)가 없는 날로 알려져, 이사나 결혼, 개업 등 중요한 행사를 치르기에 가장 좋은 길일입니다. 2026년 8월의 정확한 손없는 날짜와 이를 활용한 이사 비용 절감 노하우, 전문적인 택일 정보를 지금 확인하세요.</p>
+    <button class="btn-cta" onclick="location.href='#calendar-2026'">2026년 8월 달력 바로 확인</button>
+</header>
+
+<nav aria-label="페이지 내 이동 목차">
+    <ul>
+        <li><a href="#definition">손없는날 정의</a></li>
+        <li><a href="#calendar-2026">8월 달력 (2026)</a></li>
+        <li><a href="#cost-saving">이사 비용 절감</a></li>
+        <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="#related-keywords">관련 키워드</a></li>
+        <li><a href="#trust-sites">신뢰 정보 출처</a></li>
+        <li><a href="#planning-form">계획 상담 요청</a></li>
+    </ul>
+</nav>
+
+<section id="definition">
+    <span id="definition-anchor" class="anchor"></span>
+    <h2>'손없는날'이란 무엇인가요? (전통과 현대적 의미)</h2>
+    <p><strong>'손없는날'</strong>은 한국의 전통적인 **길일(吉日)** 중 하나로, 아홉 가지 방향으로 돌아다니며 사람의 활동을 방해하고 해코지하는 악귀 또는 귀신을 의미하는 **'손(損)'**이 없는 날을 뜻합니다. 민속신앙에서 이 손은 음력으로 **1, 2, 9, 10이 들어가는 날**에는 하늘로 올라가거나 움직이지 않기 때문에, 이 날짜에 이사를 하거나 잔치를 벌이면 재난이나 손해를 입지 않고 만사가 순조롭다고 믿었습니다.</p>
+
+    <h3>손없는날의 정확한 계산 원리</h3>
+    <p>손없는날은 양력이 아닌 **음력 날짜**를 기준으로 계산됩니다. 원리는 다음과 같습니다. </p>
+    <ul>
+        <li><strong>음력 1일, 2일:</strong> '손'이 동쪽에 머무름.</li>
+        <li><strong>음력 3일, 4일:</strong> '손'이 남쪽에 머무름.</li>
+        <li><strong>음력 5일, 6일:</strong> '손'이 서쪽에 머무름.</li>
+        <li><strong>음력 7일, 8일:</strong> '손'이 북쪽에 머무름.</li>
+        <li><strong>음력 9일, 10일: </strong>'손'이 하늘로 올라가거나 멀리 떠나 **어느 방향에도 없음(손없음)**.</li>
+        <li>**따라서, 음력 날짜의 끝자리가 '9' 또는 '0'인 날이 손없는날입니다.** (19일, 20일, 29일, 30일 등)</li>
+    </ul>
+</section>
+
+<section id="calendar-2026">
+    <span id="calendar-2026-anchor" class="anchor"></span>
+    <h2>🗓️ 2026년 8월 손없는날 달력 (이사, 결혼, 개업 택일)</h2>
+    <p>2026년 8월은 여름 휴가철이 겹쳐 이사 수요가 많은 달입니다. 특히 손없는 날은 이사 예약이 조기에 마감되거나 비용이 상승하므로, 미리 날짜를 확정하고 예약하는 것이 중요합니다.</p>
+    
+    <p><strong>[정보 고지]</strong> 아래 표는 양력 2026년 8월을 기준으로 한 **음력 날짜별 손없는날** 정보입니다.</p>
+
+    <h3>2026년 8월 손없는날 상세 표</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>양력 날짜</th>
+                <th>음력 날짜</th>
+                <th>요일</th>
+                <th>손없는날 여부</th>
+                <th>주요 추천 행사</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>8월 1일</td><td>6월 18일</td><td>토</td><td>손 있는 날</td><td>평일 이사 고려</td></tr>
+            <tr><td>8월 2일</td><td>6월 19일</td><td>일</td><td class="lucky-day">손없는날 (9)</td><td>**이사, 결혼 최적**</td></tr>
+            <tr><td>8월 3일</td><td>6월 20일</td><td>월</td><td class="lucky-day">손없는날 (0)</td><td>**이사, 개업 길일**</td></tr>
+            <tr><td>8월 4일</td><td>6월 21일</td><td>화</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 5일</td><td>6월 22일</td><td>수</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 6일</td><td>6월 23일</td><td>목</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 7일</td><td>6월 24일</td><td>금</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 8일</td><td>6월 25일</td><td>토</td><td>손 있는 날</td><td>주말 이사 피함</td></tr>
+            <tr><td>8월 9일</td><td>6월 26일</td><td>일</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 10일</td><td>6월 27일</td><td>월</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 11일</td><td>6월 28일</td><td>화</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 12일</td><td>6월 29일</td><td>수</td><td class="lucky-day">손없는날 (9)</td><td>**이사, 결혼 길일**</td></tr>
+            <tr><td>8월 13일</td><td>6월 30일</td><td>목</td><td class="lucky-day">손없는날 (0)</td><td>**이사, 개업 추천**</td></tr>
+            <tr><td>8월 14일</td><td>7월 1일</td><td>금</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 15일</td><td>7월 2일</td><td>토</td><td>손 있는 날</td><td>광복절 (공휴일)</td></tr>
+            <tr><td>8월 16일</td><td>7월 3일</td><td>일</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 17일</td><td>7월 4일</td><td>월</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 18일</td><td>7월 5일</td><td>화</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 19일</td><td>7월 6일</td><td>수</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 20일</td><td>7월 7일</td><td>목</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 21일</td><td>7월 8일</td><td>금</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 22일</td><td>7월 9일</td><td>토</td><td class="lucky-day">손없는날 (9)</td><td>**이사, 결혼 최적**</td></tr>
+            <tr><td>8월 23일</td><td>7월 10일</td><td>일</td><td class="lucky-day">손없는날 (0)</td><td>**이사, 개업 길일**</td></tr>
+            <tr><td>8월 24일</td><td>7월 11일</td><td>월</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 25일</td><td>7월 12일</td><td>화</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 26일</td><td>7월 13일</td><td>수</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 27일</td><td>7월 14일</td><td>목</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 28일</td><td>7월 15일</td><td>금</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 29일</td><td>7월 16일</td><td>토</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 30일</td><td>7월 17일</td><td>일</td><td>손 있는 날</td><td></td></tr>
+            <tr><td>8월 31일</td><td>7월 18일</td><td>월</td><td>손 있는 날</td><td></td></tr>
+        </tbody>
+    </table>
+
+    <h3>2026년 8월의 길일(손없는날) 요약</h3>
+    <p>2026년 8월에는 총 **4일**의 손없는날이 있습니다. 양력 날짜로는 **8월 2일 (일), 8월 3일 (월), 8월 12일 (수), 8월 13일 (목), 8월 22일 (토), 8월 23일 (일)**이 해당됩니다. 주말에 겹치는 날이 많아 이사나 결혼을 계획하시는 분들은 예약 경쟁이 매우 치열할 것으로 예상되니, 최소 6개월 전부터 준비하시는 것을 권장합니다.</p>
+</section>
+
+<section id="cost-saving">
+    <span id="cost-saving-anchor" class="anchor"></span>
+    <h2>💰 손없는날 이사 비용 절감 노하우와 현명한 택일 전략</h2>
+    <p><strong>'손없는날 이사 비용'</strong>은 일반 평일 대비 평균적으로 20%~40%까지 높게 형성됩니다. 손없는날에 이사를 고집할 경우 발생하는 추가 비용을 현명하게 절감하고, 불필요한 지출을 막는 전문가의 팁을 알려드립니다.</p>
+
+    <h3>1. '손 있는 날' 이사, 비용은 절감되고 안전은 확보하는 방법</h3>
+    <p>반드시 손없는 날에 이사해야 한다는 부담을 내려놓으면, 이사 비용을 획기적으로 줄일 수 있습니다. 특히 **수요일, 목요일** 등 평일의 **'손 있는 날'**을 활용하면 좋습니다. 전통적인 신앙이 불안하다면, 다음과 같은 현대적인 대안을 고려할 수 있습니다.</p>
+    <ul>
+        <li><strong>용달 이사 활용:</strong> 짐이 적다면 포장 이사 대신 용달 이사를 선택하여 비용을 절감합니다.</li>
+        <li><strong>오전 시간대 예약:</strong> 이사 수요가 몰리는 정오 이전 시간대를 피하고, 오후 시간대나 늦은 시간을 예약하면 상대적으로 저렴해질 수 있습니다.</li>
+        <li><strong>방위별 손 회피:</strong> 손이 특정한 방향에 머무르는 날(예: 음력 1일, 2일은 동쪽)을 피하여, 현재 사는 집의 이사 나가는 방향과 겹치지 않는 날을 선택하는 것도 하나의 방법입니다.</li>
+    </ul>
+
+    <h3>2. 이사 견적 비교 체크리스트 (체류 시간 증대를 위한 입력란)</h3>
+    <p>여러 이사업체의 견적을 비교할 때, 가격뿐만 아니라 서비스의 질을 함께 고려해야 합니다. 아래 체크리스트를 활용하여 견적을 요청하고 비교해보세요. </p>
+    
+    <form id="moving-cost-compare" action="#" onsubmit="return false;">
+        <h3>이사 견적 비교를 위한 정보 입력</h3>
+        <label for="move-date-type">희망 이사 날짜 유형:</label>
+        <select id="move-date-type" name="move_date_type">
+            <option value="son-o">손없는날</option>
+            <option value="son-x">손있는날 (평일)</option>
+            <option value="weekend">손있는날 (주말)</option>
+        </select>
+        
+        <label for="home-type">현 거주지 형태 (이사 짐량 파악):</label>
+        <select id="home-type" name="home_type">
+            <option value="one-room">원룸/오피스텔</option>
+            <option value="20-pyeong">아파트/주택 (20평대)</option>
+            <option value="30-pyeong">아파트/주택 (30평대 이상)</option>
+        </select>
+
+        <label for="move-distance">예상 이사 거리 (km):</label>
+        <input type="number" id="move-distance" name="move_distance" min="1" max="500" placeholder="예: 25 (단거리 이사)" />
+
+        <label for="packing-service">포장 서비스 선택:</label>
+        <select id="packing-service" name="packing_service">
+            <option value="full">포장 이사 (Full Package)</option>
+            <option value="semi">반포장 이사</option>
+            <option value="general">일반 이사</option>
+        </select>
+
+        <label for="option-cleaning">입주 청소 서비스 필요 여부:</label>
+        <select id="option-cleaning" name="option_cleaning">
+            <option value="yes">필요</option>
+            <option value="no">불필요</option>
+        </select>
+
+        <button class="btn-cta" type="submit" style="background:#2ecc71; max-width: 100%;">맞춤 견적 가이드 받기</button>
+    </form>
+    
+    <h3>3. 결혼 길일과 개업 택일의 현대적 해석</h3>
+    <p>결혼이나 개업 등 인생의 중요한 행사는 이사와 달리 날짜 변경이 더 유연할 수 있습니다. 8월의 손없는날 외에도, 단순히 **주말이나 공휴일이 아닌 평일의 길일**을 선택하면 웨딩홀이나 개업 장소의 예약 비용을 절감하는 효과를 얻을 수 있습니다. 풍수지리 전문가들은 손없는 날 외에도 개인의 사주나 절기를 고려한 **"절기 길일"**을 함께 추천하기도 합니다.</p>
+</section>
+
+<section id="faq">
+    <span id="faq-anchor" class="anchor"></span>
+    <h2>자주 묻는 질문 (FAQ) - 손없는날 8월 편</h2>
+    <dl>
+        <dt>Q1. 2026년 8월에 손없는날이 주말에 겹치면 이사 비용이 많이 비싼가요?</dt>
+        <dd>A. 네. **8월 2일(일), 8월 22일(토), 8월 23일(일)**은 손없는날이면서 주말에 겹치므로, 이사 업체의 **프리미엄 요금**이 적용될 가능성이 매우 높습니다. 이사 비용을 절약하려면 평일인 **8월 3일(월), 8월 12일(수), 8월 13일(목)**을 고려하는 것이 좋습니다.</dd>
+
+        <dt>Q2. 손없는날 외에 이사하기 좋은 '준 길일'은 없나요?</dt>
+        <dd>A. 전통적으로 **천덕일(天德日)**, **월덕일(月德日)** 등 좋은 기운이 있는 날을 준 길일로 봅니다. 이 날들은 손없는날만큼 비싸지 않으면서도 길한 기운을 받을 수 있어 현대에 와서 대안으로 많이 선택됩니다. 전문가 상담을 통해 개인에게 맞는 준 길일을 찾아보세요.</dd>
+
+        <dt>Q3. 손없는날을 피해서 이사하면 정말로 안 좋은 일이 생기나요?</dt>
+        <dd>A. 현대 사회에서는 미신으로 치부되지만, 이는 오랜 기간 전해져 내려온 민속 신앙입니다. 손없는날을 택할 수 없다면, 이사 시 집안의 환기나 청소, 좋은 기운을 불러오는 물건 배치 등 **심리적 안정감**을 높이는 현대적 풍수 요소를 활용하는 것이 더 중요합니다.</dd>
+        
+        <dt>Q4. 8월의 날씨 특성상 이사 시 주의해야 할 점이 있나요?</dt>
+        <dd>A. 8월은 장마철과 무더위가 겹치는 시기입니다. 이사 시 **냉장/냉동 식품 관리**에 특히 주의해야 하며, 이사업체가 **방수 포장**이 가능한지, 더위에 지연 없이 작업할 수 있는 **충분한 인력**을 배치하는지 미리 확인해야 합니다.</dd>
+
+        <dt>Q5. 새로 개업하는 가게의 경우, 손없는날이 필수적인가요?</dt>
+        <dd>A. 필수적이지는 않으나, 개업식은 사업의 성공을 기원하는 의미가 크므로 길일을 택하는 경우가 많습니다. 8월의 손없는날 중 **월요일(8월 3일)**이나 **목요일(8월 13일)**은 주말 대비 사람이 붐비지 않아 개업 준비에 유리할 수 있습니다.</dd>
+    </dl>
+</section>
+
+<section id="related-keywords">
+    <span id="related-keywords-anchor" class="anchor"></span>
+    <h2>🔍 함께 많이 찾는 키워드 및 카테고리 (SEO 강화)</h2>
+    <nav aria-label="관련 검색어">
+        <ul>
+            <li><a href="/2026년-이사하기-좋은날">2026년 이사하기 좋은 날</a></li>
+            <li><a href="/8월-결혼-길일">8월 결혼 길일</a></li>
+            <li><a href="/손없는날-계산법">손없는날 계산법</a></li>
+            <li><a href="/8월-개업-택일">8월 개업 택일</a></li>
+            <li><a href="/이사-손없는날-아닌-날">이사 손없는날 아닌 날</a></li>
+            <li><a href="/이사-견적-비교">이사 견적 비교</a></li>
+        </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+    <nav aria-label="함께 많이 찾는 카테고리">
+        <ul>
+            <li><a href="/이사-전문가-팁">이사 전문가 팁</a></li>
+            <li><a href="/결혼-준비-체크리스트">결혼 준비 체크리스트</a></li>
+            <li><a href="/전통-풍수지리">전통 풍수지리</a></li>
+            <li><a href="/이사-비용-절감">이사 비용 절감</a></li>
+            <li><a href="/택일-서비스">택일 서비스</a></li>
+        </ul>
+    </nav>
+</section>
+
+<section id="trust-sites">
+    <span id="trust-sites-anchor" class="anchor"></span>
+    <h2>🤝 신뢰성 높은 외부 정보 출처 (공인된 5개 이상)</h2>
+    <p>손없는날과 이사, 택일 관련하여 신뢰할 수 있는 공식 정보와 민속 자료를 제공하는 외부 사이트입니다.</p>
+    <ul>
+        <li><a href="https://www.nfm.go.kr" target="_blank" rel="noopener noreferrer">국립민속박물관 (한국의 세시풍속 및 민속신앙)</a></li>
+        <li><a href="https://www.academy.aks.ac.kr" target="_blank" rel="noopener noreferrer">한국학중앙연구원 (손없는날의 역사적 배경)</a></li>
+        <li><a href="https://namu.wiki/w/%EC%86%90%EC%97%86%EB%8A%94%EB%82%A0" target="_blank" rel="noopener noreferrer">나무위키 - 손없는날 (개념 및 현대적 해석)</a></li>
+        <li><a href="https://www.kostat.go.kr" target="_blank" rel="noopener noreferrer">통계청 (국내 인구 이동 및 이사 통계 자료)</a></li>
+        <li><a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer">법제처 (이사/부동산 관련 법령 정보)</a></li>
+        <li><a href="https://www.korea.kr" target="_blank" rel="noopener noreferrer">대한민국 정책브리핑 (생활정보 및 공휴일 정보)</a></li>
+    </ul>
+</section>
+
+<section id="planning-form">
+    <span id="planning-form-anchor" class="anchor"></span>
+    <h2>📝 2026년 8월 이사/결혼 계획 맞춤 상담 요청</h2>
+    <p>개인의 상황에 맞는 최적의 길일과 이사 비용 절감 전략을 전문가와 상담해보세요. 아래 폼을 통해 간편하게 문의할 수 있으며, **체류 시간 증대를 위해 상세 입력란을 구성했습니다.**</p>
+
+    <form id="planning-consulting-form" action="#" method="POST" style="max-width:700px; margin:auto;">
+        <h3>필수 정보 입력</h3>
+        <label for="consult-name">이름<span style="color:red;">*</span></label>
+        <input type="text" id="consult-name" name="consult_name" placeholder="홍길동" required />
+
+        <label for="consult-phone">휴대폰 번호<span style="color:red;">*</span></label>
+        <input type="text" id="consult-phone" name="consult_phone" placeholder="010-XXXX-XXXX (연락 가능한 번호)" required />
+
+        <label for="consult-email">이메일</label>
+        <input type="email" id="consult-email" name="consult_email" placeholder="example@mail.com" />
+        
+        <h3>세부 계획 정보 (전문성 강화)</h3>
+        <label for="event-type">계획 중인 주요 행사<span style="color:red;">*</span></label>
+        <select id="event-type" name="event_type" required>
+            <option value="">선택하세요</option>
+            <option value="이사">이사 (주택, 아파트, 오피스텔)</option>
+            <option value="결혼">결혼 (예식, 상견례)</option>
+            <option value="개업">개업 (사업 시작)</option>
+            <option value="기타">기타 중요 행사</option>
+        </select>
+        
+        <label for="preferred-date">선호하는 날짜 (2026년 8월 중)</label>
+        <input type="text" id="preferred-date" name="preferred_date" placeholder="예: 8월 12일 (손없는날), 또는 8월 20일 (평일)" />
+        
+        <label for="current-address">현재 거주지 (시/도 단위)</label>
+        <input type="text" id="current-address" name="current_address" placeholder="예: 서울특별시" />
+        
+        <label for="target-address">행사/이동 예정 지역 (시/도 단위)</label>
+        <input type="text" id="target-address" name="target_address" placeholder="예: 경기도 성남시" />
+        
+        <label for="budget">예상 예산 범위 (원)</label>
+        <input type="number" id="budget" name="budget" min="100000" placeholder="예: 3000000 (300만원)" />
+
+        <label for="consult-message">구체적인 문의 내용 (최대한 상세하게 작성해주세요.)</label>
+        <textarea id="consult-message" name="consult_message" rows="6" placeholder="이사하는 짐의 양(가구 수), 결혼식 하객 규모, 개업 업종 등을 상세히 적어주시면 정확한 상담이 가능합니다."></textarea>
+
+        <button class="btn-cta" type="submit" style="background:#e74c3c;">맞춤 상담 요청하기</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 길일 정보 전문가이드. All rights reserved. 본 정보는 전통적인 자료와 공신력 있는 기관의 정보를 토대로 구성되었습니다.</p>
+</footer>
+
+</body>
